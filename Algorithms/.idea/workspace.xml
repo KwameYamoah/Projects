@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2ceea33-4ff0-4a05-a89d-942b5087e686" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Algorithms/Symbols/Parenthesis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Algorithms/Symbols/ParenthesisTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/BubbleSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/BubbleSortTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/HeapSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/InsertionSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/MergeSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/QuickSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/SelectionSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/SortingAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Projects.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/Parenthesis.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -31,7 +35,9 @@
     </enabled-run-configurations>
   </component>
   <component name="ProjectId" id="1SD8FYQDOrdfMsL8PUb94DomwnT" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
@@ -50,6 +56,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="Algorithms.Sorting" />
       <recent name="Algorithms" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -68,7 +75,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ParenthesisTest">
+  <component name="RunManager" selected="Application.BubbleSort">
+    <configuration name="BubbleSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Algorithms.Sorting.BubbleSort" />
+      <module name="Projects" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Algorithms.Sorting.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Algorithms.Main" />
       <module name="Projects" />
@@ -106,6 +126,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BubbleSort" />
         <item itemvalue="JUnit.ParenthesisTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Solution" />
@@ -129,6 +150,14 @@
       <workItem from="1566826174210" duration="1614000" />
       <workItem from="1566828127377" duration="1569000" />
     </task>
+    <task id="LOCAL-00001" summary="Completed Parenthesis checker&#10;Added Junit Testing">
+      <created>1571089183805</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571089183805</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -172,5 +201,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Completed Parenthesis checker&#10;Added Junit Testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed Parenthesis checker&#10;Added Junit Testing" />
   </component>
 </project>
