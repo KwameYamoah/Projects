@@ -12,6 +12,11 @@ public class QuickSort implements SortingAlgorithm {
     }
 
     @Override
+    public void sort(List<Integer> unsortedCollection, boolean ascendingOder) {
+
+    }
+
+    @Override
     public void timeComplexity() {
 
     }

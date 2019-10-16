@@ -1,22 +1,39 @@
 package Algorithms.Sorting;
-import java.util.Arrays;
+
 import java.util.List;
 
 public class BubbleSort implements SortingAlgorithm {
     @Override
     public void sort(List<Integer> unsortedCollection) {
+        sort(unsortedCollection,true);
+    }
+
+    @Override
+    public void sort(List<Integer> unsortedCollection, boolean ascendingOrder) {
         if (unsortedCollection.size() == 0) return;
+        if (unsortedCollection.size() == 1) return;
+
         int flag = 0;
         for (int i = 0; i < unsortedCollection.size() - 1; i++) {
             for (int j = 0; j < unsortedCollection.size() - (i + 1); j++) {
-                if (unsortedCollection.get(j) > unsortedCollection.get(j + 1)) {
-                    flag++;
-                    int temp = unsortedCollection.get(j);
-                    unsortedCollection.set(j, unsortedCollection.get(j + 1));
-                    unsortedCollection.set(j + 1, temp);
+                if(ascendingOrder) {
+                    if (unsortedCollection.get(j) > unsortedCollection.get(j + 1)) {
+                        flag++;
+                        int temp = unsortedCollection.get(j);
+                        unsortedCollection.set(j, unsortedCollection.get(j + 1));
+                        unsortedCollection.set(j + 1, temp);
+                    }
+                }
+                else{
+                    if (unsortedCollection.get(j) < unsortedCollection.get(j + 1)) {
+                        flag++;
+                        int temp = unsortedCollection.get(j);
+                        unsortedCollection.set(j, unsortedCollection.get(j + 1));
+                        unsortedCollection.set(j + 1, temp);
+                    }
                 }
             }
-            if(flag==0) return;
+            if (flag == 0) return;
             else flag = 0;
         }
     }
@@ -35,14 +52,4 @@ public class BubbleSort implements SortingAlgorithm {
         System.out.println("Space Complexity: O(1)"); //Only needs one temp variable
 
     }
-
-    public static void main(String[] args) {
-        BubbleSort bubbleSort = new BubbleSort();
-        List<Integer> unsortedArray = Arrays.asList(7, 2, 10, 8, 6, 4, 1, 5, 9, 3);
-        bubbleSort.sort(unsortedArray);
-        System.out.println(unsortedArray);
-
-    }
-
-
 }
