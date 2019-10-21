@@ -49,14 +49,18 @@ public class SelectionSort implements SortingAlgorithm {
         }
 
     }
-
     @Override
     public void timeComplexity() {
+        System.out.println("Big O notation");
+        System.out.println("Worst Case Time Complexity: O(n^2)");
+        System.out.println("Average Case Time Complexity: O(n^2)");
+        System.out.println("Best Case Time Complexity: O(n^2)");
 
     }
 
     @Override
     public void spaceComplexity() {
+        System.out.println("Space Complexity: O(1)"); //sub arrays
 
     }
 

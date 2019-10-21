@@ -96,18 +96,18 @@ public class MergeSort implements SortingAlgorithm {
     }
 
 
-    @Override
-    public void timeComplexity() {
-        System.out.println("Big O notation");
-        System.out.println("Worst Case Time Complexity: O(nlogn)");
-        System.out.println("Average Case Time Complexity: O(nlogn)");
-        System.out.println("Best Case Time Complexity: O(nlogn)");
+        @Override
+        public void timeComplexity() {
+            System.out.println("Big O notation");
+            System.out.println("Worst Case Time Complexity: O(nlogn)");
+            System.out.println("Average Case Time Complexity: O(nlogn)");
+            System.out.println("Best Case Time Complexity: O(nlogn)");
 
-    }
+        }
 
-    @Override
-    public void spaceComplexity() {
-        System.out.println("Space Complexity: O(n)"); //sub arrays
+        @Override
+        public void spaceComplexity() {
+            System.out.println("Space Complexity: O(n)"); //sub arrays
 
-    }
+        }
 }
