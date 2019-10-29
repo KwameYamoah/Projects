@@ -94,11 +94,11 @@
   </component>
   <component name="RunManager" selected="Application.UI_Menu">
     <configuration name="UI_Frame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Algorithms.Interface.UI_Frame" />
+      <option name="MAIN_CLASS_NAME" value="Algorithms.Sorting.Interface.UI_Frame" />
       <module name="Projects" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Algorithms.Interface.*" />
+          <option name="PATTERN" value="Algorithms.Sorting.Interface.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,11 +107,11 @@
       </method>
     </configuration>
     <configuration name="UI_Menu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Algorithms.Interface.UI_Menu" />
+      <option name="MAIN_CLASS_NAME" value="Algorithms.Sorting.Interface.UI_Menu" />
       <module name="Projects" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Algorithms.Interface.*" />
+          <option name="PATTERN" value="Algorithms.Sorting.Interface.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,7 +124,7 @@
       <module name="Projects" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Algorithms.Interface.*" />
+          <option name="PATTERN" value="Algorithms.Sorting.Interface.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

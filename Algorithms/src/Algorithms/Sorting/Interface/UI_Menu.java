@@ -1,4 +1,4 @@
-package Algorithms.Interface;
+package Algorithms.Sorting.Interface;
 
 import javax.swing.*;
 import java.util.Arrays;
