@@ -5,38 +5,51 @@ import java.util.List;
 public class BubbleSort implements SortingAlgorithm {
     @Override
     public void sort(List<Integer> unsortedCollection) {
-        sort(unsortedCollection,true);
+        sort(unsortedCollection, true);
     }
 
     @Override
     public void sort(List<Integer> unsortedCollection, boolean ascendingOrder) {
-        if (unsortedCollection.size() == 0) return;
-        if (unsortedCollection.size() == 1) return;
+        if (unsortedCollection.size() == 0 || unsortedCollection.size() == 1) return;
 
-        int flag = 0;
-        for (int i = 0; i < unsortedCollection.size() - 1; i++) {
-            for (int j = 0; j < unsortedCollection.size() - (i + 1); j++) {
-                if(ascendingOrder) {
+        int swapCounter = sortStage.getCounter();
+        for (int i = sortStage.getI(); i < unsortedCollection.size() - 1; i++) {
+            for (int j = sortStage.getJ(); j < unsortedCollection.size() - (i + 1); j++) {
+                sortStage.setCurrentTargets(j, j + 1);
+                if (ascendingOrder) {
                     if (unsortedCollection.get(j) > unsortedCollection.get(j + 1)) {
-                        flag++;
+                        swapCounter++;
+                        int temp = unsortedCollection.get(j);
+                        unsortedCollection.set(j, unsortedCollection.get(j + 1));
+                        unsortedCollection.set(j + 1, temp);
+                    }
+                } else {
+                    if (unsortedCollection.get(j) < unsortedCollection.get(j + 1)) {
+                        swapCounter++;
                         int temp = unsortedCollection.get(j);
                         unsortedCollection.set(j, unsortedCollection.get(j + 1));
                         unsortedCollection.set(j + 1, temp);
                     }
                 }
-                else{
-                    if (unsortedCollection.get(j) < unsortedCollection.get(j + 1)) {
-                        flag++;
-                        int temp = unsortedCollection.get(j);
-                        unsortedCollection.set(j, unsortedCollection.get(j + 1));
-                        unsortedCollection.set(j + 1, temp);
+                if (sortStage.isStarted()) {
+                    sortStage.setJ(j + 1);
+                    if (j == unsortedCollection.size() - (i + 2)) {
+                        sortStage.setI(i + 1);
+                        sortStage.setJ(0);
                     }
+                    if (i == unsortedCollection.size() - 2) sortStage.setSorted(true);
+                    return;
                 }
             }
-            if (flag == 0) return;
-            else flag = 0;
+            if (swapCounter == 0) {
+                return;
+            } else {
+                swapCounter = 0;
+                sortStage.setCounter(0);
+            }
         }
     }
+
 
     @Override
     public void timeComplexity() {
@@ -50,6 +63,14 @@ public class BubbleSort implements SortingAlgorithm {
     @Override
     public void spaceComplexity() {
         System.out.println("Space Complexity: O(1)"); //Only needs one temp variable
+    }
 
+    @Override
+    public SortStage nextStepSort(SortStage sortStage, List<Integer> unsortedCollection) {
+        if (sortStage != null) this.sortStage.update(sortStage);
+        this.sortStage.setStarted(true);
+        sort(unsortedCollection, this.sortStage.isAscendingOrder());
+        System.out.println(unsortedCollection);
+        return this.sortStage;
     }
 }

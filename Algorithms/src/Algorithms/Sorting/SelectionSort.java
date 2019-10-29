@@ -1,68 +1,76 @@
 package Algorithms.Sorting;
 
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 public class SelectionSort implements SortingAlgorithm {
-
-
     @Override
     public void sort(List<Integer> unsortedCollection) {
-        sort(unsortedCollection,true);
+        sort(unsortedCollection, true);
     }
 
     @Override
     public void sort(List<Integer> unsortedCollection, boolean ascendingOder) {
-        int sorted = 0;
-        for(int i = 0; i < unsortedCollection.size(); i++)
-        {
-            List<Integer> unsorted = unsortedCollection.subList(sorted,unsortedCollection.size());
-            int count = sorted;
-            int min = unsortedCollection.get(sorted);
-            int minIndex = sorted;
+        int flag = sortStage.getCounter();
+        for (int i = sortStage.getI(); i < unsortedCollection.size(); i++) {
+            List<Integer> unsorted = unsortedCollection.subList(flag, unsortedCollection.size());
 
-            for(Integer n : unsorted){
-                if(ascendingOder) {
+            int count = flag;
+            int min = unsortedCollection.get(flag);
+            int minIndex = flag;
+            for (Integer n : unsorted) {
+                if (ascendingOder) {
                     if (n < min) {
                         min = n;
                         minIndex = count;
                     }
-                }
-                else{
+                } else {
                     if (n > min) {
                         min = n;
                         minIndex = count;
                     }
-
                 }
                 count++;
             }
 
-            if(sorted!=minIndex){
-                int temp = unsortedCollection.get(sorted);
-                unsortedCollection.set(sorted,unsortedCollection.get(minIndex));
-                unsortedCollection.set(minIndex,temp);
+            if (flag != minIndex) {
+                int temp = unsortedCollection.get(flag);
+                unsortedCollection.set(flag, unsortedCollection.get(minIndex));
+                unsortedCollection.set(minIndex, temp);
+                sortStage.setCurrentTargets(flag, minIndex);
+
             }
-            sorted++;
+            flag++;
 
+            if (sortStage.isStarted()) {
+                sortStage.setCounter(flag);
+                sortStage.setI(i + 1);
+                break;
+            }
         }
-
+        if (sortStage.getI() >= unsortedCollection.size()) sortStage.setSorted(true);
     }
+
     @Override
     public void timeComplexity() {
         System.out.println("Big O notation");
         System.out.println("Worst Case Time Complexity: O(n^2)");
         System.out.println("Average Case Time Complexity: O(n^2)");
         System.out.println("Best Case Time Complexity: O(n^2)");
-
     }
 
     @Override
     public void spaceComplexity() {
         System.out.println("Space Complexity: O(1)"); //sub arrays
-
     }
 
-
+    @Override
+    public SortStage nextStepSort(SortStage sortStage, List<Integer> unsortedCollection) {
+        if (sortStage != null) {
+            this.sortStage.update(sortStage);
+        }
+        this.sortStage.setStarted(true);
+        sort(unsortedCollection, this.sortStage.isAscendingOrder());
+        System.out.println(unsortedCollection);
+        return this.sortStage;
+    }
 }

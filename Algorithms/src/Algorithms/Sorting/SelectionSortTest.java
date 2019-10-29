@@ -29,8 +29,6 @@ public class SelectionSortTest {
         List<Integer> list4 = new ArrayList<>();
         selectionSort.sort(list4);
         assertEquals(new ArrayList<>(), list4);
-
-
     }
 
     @Test
@@ -38,11 +36,11 @@ public class SelectionSortTest {
         SortingAlgorithm selectionSort = new SelectionSort();
 
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        selectionSort.sort(list, false);
+        selectionSort.sort(list,false);
         assertEquals(Arrays.asList(10, 9, 8, 7, 6, 5, 4, 3, 2, 1), list);
 
         List<Integer> list2 = Arrays.asList(5, 9, 2, 1, 6, 3, 10, 8, 7, 4);
-        selectionSort.sort(list2, false);
+        selectionSort.sort(list2,false);
         assertEquals(Arrays.asList(10, 9, 8, 7, 6, 5, 4, 3, 2, 1), list2);
 
     }

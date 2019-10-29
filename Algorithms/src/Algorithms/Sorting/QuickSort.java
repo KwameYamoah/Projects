@@ -1,14 +1,8 @@
 package Algorithms.Sorting;
 
-import com.sun.xml.internal.ws.addressing.WsaActionUtil;
-
-import java.sql.SQLOutput;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 public class QuickSort implements SortingAlgorithm {
-
 
     @Override
     public void sort(List<Integer> unsortedCollection) {
@@ -16,17 +10,14 @@ public class QuickSort implements SortingAlgorithm {
 
     }
 
-
     @Override
     public void sort(List<Integer> unsortedCollection, boolean ascendingOder) {
         sort(unsortedCollection, 0, unsortedCollection.size() - 1, ascendingOder);
     }
 
-
     private void sort(List<Integer> unsortedCollection, int low, int high, boolean ascendingOrder) {
-
         if (low < high) {
-            int partitionIndex = partition(unsortedCollection, low, high,ascendingOrder);
+            int partitionIndex = partition(unsortedCollection, low, high, ascendingOrder);
             sort(unsortedCollection, low, partitionIndex - 1, ascendingOrder);
             sort(unsortedCollection, partitionIndex + 1, high, ascendingOrder);
         }
@@ -38,18 +29,17 @@ public class QuickSort implements SortingAlgorithm {
         unsortedCollection.set(high, unsortedCollection.get(pivot));
         unsortedCollection.set(pivot, temp);
         pivot = high;
-        int pivotValue = unsortedCollection.get(pivot);
 
         int leftPointer = low;
         int rightPointer = high - 1;
-        while (leftPointer < rightPointer) {
+        int pivotValue = unsortedCollection.get(pivot);
+        while (leftPointer <= rightPointer) {
             for (int i = leftPointer; i < high; i++) {
-                if(ascendingOrder) {
+                if (ascendingOrder) {
                     if (unsortedCollection.get(i) > pivotValue) {
                         break;
                     }
-                }
-                else{
+                } else {
                     if (unsortedCollection.get(i) < pivotValue) {
                         break;
                     }
@@ -57,12 +47,11 @@ public class QuickSort implements SortingAlgorithm {
                 leftPointer++;
             }
             for (int i = rightPointer; i >= low; i--) {
-                if(ascendingOrder) {
+                if (ascendingOrder) {
                     if (unsortedCollection.get(i) < pivotValue) {
                         break;
                     }
-                }
-                else{
+                } else {
                     if (unsortedCollection.get(i) > pivotValue) {
                         break;
                     }
@@ -74,16 +63,12 @@ public class QuickSort implements SortingAlgorithm {
                 int t = unsortedCollection.get(rightPointer);
                 unsortedCollection.set(rightPointer, unsortedCollection.get(leftPointer));
                 unsortedCollection.set(leftPointer, t);
-
             }
         }
-
-
         int t = unsortedCollection.get(leftPointer);
         unsortedCollection.set(leftPointer, unsortedCollection.get(high));
         unsortedCollection.set(high, t);
         pivot = leftPointer;
-
         return pivot;
     }
 
@@ -110,5 +95,14 @@ public class QuickSort implements SortingAlgorithm {
 
     }
 
-
+    @Override
+    public SortStage nextStepSort(SortStage sortStage, List<Integer> unsortedCollection) {
+        if (sortStage != null) {
+            this.sortStage.update(sortStage);
+        }
+        this.sortStage.setStarted(true);
+        sort(unsortedCollection, this.sortStage.isAscendingOrder());
+        System.out.println(unsortedCollection);
+        return this.sortStage;
+    }
 }

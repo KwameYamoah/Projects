@@ -1,8 +1,6 @@
 package Algorithms.Sorting;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 public class MergeSort implements SortingAlgorithm {
@@ -20,6 +18,7 @@ public class MergeSort implements SortingAlgorithm {
         int right = unsortedCollection.size() - 1;
         sort(unsortedCollection, left, right + 1,ascendingOder);
     }
+
 
     private void sort(List<Integer> unsortedCollection, int left, int right,boolean ascendingOrder) {
         if ((right - left) > 1) {
@@ -110,4 +109,13 @@ public class MergeSort implements SortingAlgorithm {
             System.out.println("Space Complexity: O(n)"); //sub arrays
 
         }
+
+    @Override
+    public SortStage nextStepSort(SortStage sortStage, List<Integer> unsortedCollection) {
+        if(sortStage!=null) {this.sortStage.update(sortStage);}
+        this.sortStage.setStarted(true);
+        sort(unsortedCollection,this.sortStage.isAscendingOrder());
+        System.out.println(unsortedCollection);
+        return this.sortStage;
+    }
 }
