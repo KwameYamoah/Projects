@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Projects:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2ceea33-4ff0-4a05-a89d-942b5087e686" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d2ceea33-4ff0-4a05-a89d-942b5087e686" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572433884221</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Jar file to run">
+      <created>1572434174132</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1572434174132</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -268,7 +278,8 @@
     <MESSAGE value="Visualizer(UI) for Insertion,Selection and BubbleSort Implemented.&#10;Merge Sort and QuickSort left for later implementation due to difficulties pausing the recursive nature.&#10;UI menu is left to be implemented" />
     <MESSAGE value="Interface moved into correct directory.&#10;HeapSort was previously removed as it was for Tree structures and has a similar nature to selection sort" />
     <MESSAGE value="Simple UI created to select number of values and a sort to visualize." />
-    <option name="LAST_COMMIT_MESSAGE" value="Simple UI created to select number of values and a sort to visualize." />
+    <MESSAGE value="Jar file to run" />
+    <option name="LAST_COMMIT_MESSAGE" value="Jar file to run" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Algorithms$Algorithms_Sorting_in_Projects.ic" NAME="Algorithms.Sorting in Projects Coverage Results" MODIFIED="1572416695137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
