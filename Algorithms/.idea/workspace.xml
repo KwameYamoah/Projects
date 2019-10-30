@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2ceea33-4ff0-4a05-a89d-942b5087e686" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/Constants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/BubbleSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/InsertionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/Interface/UI_Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/Interface/UI_Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/Interface/UI_Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/Interface/UI_Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/Interface/UI_Visualizer_Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/Interface/UI_Visualizer_Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/SelectionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/SortStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/SortStage.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +38,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566830413153" />
@@ -56,7 +48,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -221,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572393299900</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Simple UI created to select number of values and a sort to visualize.">
+      <created>1572433884221</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1572433884221</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -265,7 +267,8 @@
     <MESSAGE value="implemented QuickSort&#10;And test for it" />
     <MESSAGE value="Visualizer(UI) for Insertion,Selection and BubbleSort Implemented.&#10;Merge Sort and QuickSort left for later implementation due to difficulties pausing the recursive nature.&#10;UI menu is left to be implemented" />
     <MESSAGE value="Interface moved into correct directory.&#10;HeapSort was previously removed as it was for Tree structures and has a similar nature to selection sort" />
-    <option name="LAST_COMMIT_MESSAGE" value="Interface moved into correct directory.&#10;HeapSort was previously removed as it was for Tree structures and has a similar nature to selection sort" />
+    <MESSAGE value="Simple UI created to select number of values and a sort to visualize." />
+    <option name="LAST_COMMIT_MESSAGE" value="Simple UI created to select number of values and a sort to visualize." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Algorithms$Algorithms_Sorting_in_Projects.ic" NAME="Algorithms.Sorting in Projects Coverage Results" MODIFIED="1572416695137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
