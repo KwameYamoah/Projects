@@ -5,13 +5,13 @@ import java.util.List;
 public class BubbleSort implements SortingAlgorithm {
     @Override
     public void sort(List<Integer> unsortedCollection) {
+        sortStage.reset();
         sort(unsortedCollection, true);
     }
 
     @Override
     public void sort(List<Integer> unsortedCollection, boolean ascendingOrder) {
         if (unsortedCollection.size() == 0 || unsortedCollection.size() == 1) return;
-
         int swapCounter = sortStage.getCounter();
         for (int i = sortStage.getI(); i < unsortedCollection.size() - 1; i++) {
             for (int j = sortStage.getJ(); j < unsortedCollection.size() - (i + 1); j++) {
@@ -34,12 +34,18 @@ public class BubbleSort implements SortingAlgorithm {
                 if (sortStage.isStarted()) {
                     sortStage.setJ(j + 1);
                     if (j == unsortedCollection.size() - (i + 2)) {
+                        if(sortStage.getCounter()==0){
+                            sortStage.setSorted(true);
+                            return;
+                        }
                         sortStage.setI(i + 1);
                         sortStage.setJ(0);
                     }
                     if (i == unsortedCollection.size() - 2) sortStage.setSorted(true);
+                    sortStage.setCounter(sortStage.getCounter()+swapCounter);
                     return;
                 }
+
             }
             if (swapCounter == 0) {
                 return;
@@ -70,7 +76,7 @@ public class BubbleSort implements SortingAlgorithm {
         if (sortStage != null) this.sortStage.update(sortStage);
         this.sortStage.setStarted(true);
         sort(unsortedCollection, this.sortStage.isAscendingOrder());
-        System.out.println(unsortedCollection);
+        //System.out.println(unsortedCollection);
         return this.sortStage;
     }
 }

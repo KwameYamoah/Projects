@@ -7,8 +7,8 @@ public class InsertionSort implements SortingAlgorithm {
 
     @Override
     public void sort(List<Integer> unsortedCollection) {
+        sortStage.reset();
         sort(unsortedCollection, true);
-
     }
 
     @Override
@@ -71,7 +71,7 @@ public class InsertionSort implements SortingAlgorithm {
         }
         this.sortStage.setStarted(true);
         sort(unsortedCollection, this.sortStage.isAscendingOrder());
-        System.out.println(unsortedCollection);
+        //System.out.println(unsortedCollection);
         return this.sortStage;
     }
 }

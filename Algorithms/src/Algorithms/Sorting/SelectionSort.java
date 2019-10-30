@@ -1,24 +1,26 @@
 package Algorithms.Sorting;
 
+import com.sun.xml.internal.ws.addressing.WsaActionUtil;
+
 import java.util.List;
 
 public class SelectionSort implements SortingAlgorithm {
     @Override
     public void sort(List<Integer> unsortedCollection) {
+        sortStage.reset();
         sort(unsortedCollection, true);
     }
 
     @Override
-    public void sort(List<Integer> unsortedCollection, boolean ascendingOder) {
+    public void sort(List<Integer> unsortedCollection, boolean ascendingOrder) {
         int flag = sortStage.getCounter();
         for (int i = sortStage.getI(); i < unsortedCollection.size(); i++) {
             List<Integer> unsorted = unsortedCollection.subList(flag, unsortedCollection.size());
-
             int count = flag;
             int min = unsortedCollection.get(flag);
             int minIndex = flag;
             for (Integer n : unsorted) {
-                if (ascendingOder) {
+                if (ascendingOrder) {
                     if (n < min) {
                         min = n;
                         minIndex = count;
@@ -47,7 +49,7 @@ public class SelectionSort implements SortingAlgorithm {
                 break;
             }
         }
-        if (sortStage.getI() >= unsortedCollection.size()) sortStage.setSorted(true);
+        if (sortStage.isStarted() && sortStage.getI() >= unsortedCollection.size()) sortStage.setSorted(true);
     }
 
     @Override
@@ -70,7 +72,7 @@ public class SelectionSort implements SortingAlgorithm {
         }
         this.sortStage.setStarted(true);
         sort(unsortedCollection, this.sortStage.isAscendingOrder());
-        System.out.println(unsortedCollection);
+        //System.out.println(unsortedCollection);
         return this.sortStage;
     }
 }

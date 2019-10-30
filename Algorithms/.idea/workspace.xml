@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2ceea33-4ff0-4a05-a89d-942b5087e686" name="Default Changelist" comment="implemented QuickSort&#10;And test for it">
-      <change afterPath="$PROJECT_DIR$/src/Algorithms/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Algorithms/Interface/UI_Frame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Algorithms/Interface/UI_Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Algorithms/Interface/UI_Visualizer_Panel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/SortStage.java" afterDir="false" />
+    <list default="true" id="d2ceea33-4ff0-4a05-a89d-942b5087e686" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Algorithms/Constants.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/BubbleSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/BubbleSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/BubbleSortTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/HeapSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/HeapSortTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/InsertionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/InsertionSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/InsertionSortTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/MergeSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/MergeSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/MergeSortTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/QuickSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/QuickSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/QuickSortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/Interface/UI_Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/Interface/UI_Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/Interface/UI_Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/Interface/UI_Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/Interface/UI_Visualizer_Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/Interface/UI_Visualizer_Panel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/SelectionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/SelectionSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/SelectionSortTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/SortingAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/SortingAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Algorithms/Sorting/SortStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/Sorting/SortStage.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +36,6 @@
   <component name="JavaAutoRunManager">
     <enabled-run-configurations>
       <run-configuration type="JUnit" name="QuickSortTest" />
-      <run-configuration type="JUnit" name="Algorithms.Sorting in Projects" />
     </enabled-run-configurations>
   </component>
   <component name="ProjectId" id="1SD8FYQDOrdfMsL8PUb94DomwnT" />
@@ -92,7 +82,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.UI_Menu">
+  <component name="RunManager" selected="Application.UI_Frame">
     <configuration name="UI_Frame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Algorithms.Sorting.Interface.UI_Frame" />
       <module name="Projects" />
@@ -119,8 +109,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Algorithms.Interface.main" />
+    <configuration name="Algorithms.Sorting in Projects" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Projects" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Algorithms.Sorting.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Algorithms.Sorting" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Algorithms.Sorting.Interface in Projects" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Projects" />
       <extension name="coverage">
         <pattern>
@@ -128,11 +131,13 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="Algorithms.Sorting.Interface" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InsertionSortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SelectionSortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Projects" />
       <extension name="coverage">
         <pattern>
@@ -141,22 +146,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Algorithms.Sorting" />
-      <option name="MAIN_CLASS_NAME" value="Algorithms.Sorting.InsertionSortTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuickSortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Projects" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Algorithms.Sorting.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Algorithms.Sorting" />
-      <option name="MAIN_CLASS_NAME" value="Algorithms.Sorting.QuickSortTest" />
+      <option name="MAIN_CLASS_NAME" value="Algorithms.Sorting.SelectionSortTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -164,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.UI_Menu" />
         <item itemvalue="Application.UI_Frame" />
-        <item itemvalue="JUnit.InsertionSortTest" />
-        <item itemvalue="JUnit.QuickSortTest" />
-        <item itemvalue="Application.main" />
+        <item itemvalue="JUnit.Algorithms.Sorting in Projects" />
+        <item itemvalue="JUnit.SelectionSortTest" />
+        <item itemvalue="JUnit.Algorithms.Sorting.Interface in Projects" />
+        <item itemvalue="Application.UI_Menu" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +207,21 @@
       <option name="project" value="LOCAL" />
       <updated>1571619841115</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Visualizer(UI) for Insertion,Selection and BubbleSort Implemented.&#10;Merge Sort and QuickSort left for later implementation due to difficulties pausing the recursive nature.&#10;UI menu is left to be implemented">
+      <created>1572393144165</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1572393144165</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Interface moved into correct directory.&#10;HeapSort was previously removed as it was for Tree structures and has a similar nature to selection sort">
+      <created>1572393299900</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1572393299900</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -259,6 +263,13 @@
     <MESSAGE value="Added Sorting Package&#10;Added various sorting classes to Sorting Package" />
     <MESSAGE value="implemented BubbleSort,InsertionSort,MergeSort,SelectionSort&#10;and tests for them" />
     <MESSAGE value="implemented QuickSort&#10;And test for it" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented QuickSort&#10;And test for it" />
+    <MESSAGE value="Visualizer(UI) for Insertion,Selection and BubbleSort Implemented.&#10;Merge Sort and QuickSort left for later implementation due to difficulties pausing the recursive nature.&#10;UI menu is left to be implemented" />
+    <MESSAGE value="Interface moved into correct directory.&#10;HeapSort was previously removed as it was for Tree structures and has a similar nature to selection sort" />
+    <option name="LAST_COMMIT_MESSAGE" value="Interface moved into correct directory.&#10;HeapSort was previously removed as it was for Tree structures and has a similar nature to selection sort" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Algorithms$Algorithms_Sorting_in_Projects.ic" NAME="Algorithms.Sorting in Projects Coverage Results" MODIFIED="1572416695137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Algorithms.Sorting.*</FILTER>
+    </SUITE>
   </component>
 </project>

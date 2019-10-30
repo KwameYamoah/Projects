@@ -1,6 +1,6 @@
 package Algorithms.Sorting.Interface;
 
-import Algorithms.Constants;
+import Algorithms.Sorting.Constants;
 import Algorithms.Sorting.*;
 
 import javax.swing.*;
@@ -16,16 +16,20 @@ public class UI_Visualizer_Panel extends JPanel implements ActionListener {
     private List<Integer> values;
     private SortingAlgorithm sort;
 
-    UI_Visualizer_Panel(List<Integer> values, String sortType) {
+    UI_Visualizer_Panel(List<Integer> values) {
         this.values = values;
-        switch(sortType){
-            case "Insertion" :
+    }
+
+    public void startSort(String sortType) {
+        System.out.println(sortType);
+        switch (sortType) {
+            case "Insertion":
                 sort = new InsertionSort();
                 break;
-            case "Selection" :
+            case "Selection":
                 sort = new SelectionSort();
                 break;
-            case "BubbleSort" :
+            case "Bubble":
                 sort = new BubbleSort();
                 break;
             default:
@@ -33,7 +37,7 @@ public class UI_Visualizer_Panel extends JPanel implements ActionListener {
                 break;
         }
 
-        if(sort != null) {
+        if (sort != null) {
             if (sort instanceof BubbleSort) {
                 timer = new Timer(20, this);
             } else if (sort instanceof SelectionSort) {
@@ -43,12 +47,15 @@ public class UI_Visualizer_Panel extends JPanel implements ActionListener {
             }
             timer.start();
             sortStage = new SortStage();
-            sortStage.setAscendingOrder(false);
+            //sortStage.setAscendingOrder(false);
+        }
+    }
 
-        }
-        else{
-            System.out.println("Invalid sort provided");
-        }
+    void changeValues(List<Integer> values){
+        sortStage = new SortStage();
+        timer.stop();
+        this.values = values;
+        repaint();
     }
 
     @Override
@@ -61,9 +68,9 @@ public class UI_Visualizer_Panel extends JPanel implements ActionListener {
                     g.setColor(Color.red);
                 }
             }
-            g.fillRect(i * (Constants.FRAME_WIDTH / Constants.NUMBER_OF_VALUES), 0, (Constants.FRAME_WIDTH / Constants.NUMBER_OF_VALUES), values.get(i));
+            g.fillRect(i * (Constants.FRAME_WIDTH / values.size()), 0, (Constants.FRAME_WIDTH / values.size()), values.get(i));
             g.setColor(Color.WHITE);
-            g.drawLine(i * (Constants.FRAME_WIDTH / Constants.NUMBER_OF_VALUES), 0, i * (Constants.FRAME_WIDTH / Constants.NUMBER_OF_VALUES), i * values.get(i));
+            g.drawLine(i * (Constants.FRAME_WIDTH / values.size()), 0, i * (Constants.FRAME_WIDTH / values.size()), i * values.get(i));
         }
     }
 
@@ -74,6 +81,7 @@ public class UI_Visualizer_Panel extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        System.out.println("Values "+values);
         sortStage = sort.nextStepSort(sortStage, values);
         if (sortStage.isSorted()) {
             System.out.println("Sorted");

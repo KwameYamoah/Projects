@@ -97,4 +97,15 @@ public class SortStage {
         }
         return sb.toString();
     }
+
+    public void reset() {
+        this.i = 0;
+        this.j = 0;
+        this.counter = 0;
+        this.ascendingOrder = true;
+        sorted = false;
+        started = false;
+        targetA = -1;
+        targetB = -1;
+    }
 }
