@@ -1,11 +1,11 @@
 package Launcher;
 
+import javafx.scene.control.Slider;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class LoginScreen extends JPanel {
-    private static final int LOGIN_SCREEN_WIDTH = 400;
-    private static final int LOGIN_SCREEN_HEIGHT = 600;
     private static final int FIELD_LENGTH = 20;
     private JLabel userNameLabel;
     private JTextField userNameField;
@@ -13,8 +13,10 @@ public class LoginScreen extends JPanel {
     private JTextField passwordField;
     private JButton signInButton;
     private JButton exitButton;
-    private static Insets WEST_INSETS = new Insets(0,5,5,0);
-    private static Insets EAST_INSETS = new Insets(0,5,5,0);
+    public static Insets WEST_INSETS = new Insets(0,5,5,0);
+    public static Insets EAST_INSETS = new Insets(0,5,5,0);
+    public static final int LOGIN_SCREEN_WIDTH = 400;
+    public static final int LOGIN_SCREEN_HEIGHT = 600;
 
     public LoginScreen(){
         setDefaultLoginScreenValues();
@@ -95,6 +97,54 @@ public class LoginScreen extends JPanel {
         return  constraints;
     }
 
+
+
+    public boolean ifJPanelContainsComponentTest(JPanel panel){
+        JComponent comp = new JLabel();
+        panel.add(comp);
+        Component[] components = panel.getComponents();
+        for (Component component : components) {
+            if (comp.equals(component)) {
+                return true;
+            }
+        }
+        return false;
+
+    }
+
+    public boolean isUserNameLabelSet(){
+        return userNameLabel != null && ifJPanelContainsComponent(this, userNameLabel);
+    }
+
+    public boolean isUserNameFieldSet(){
+        return userNameField != null && ifJPanelContainsComponent(this, userNameField);
+    }
+
+    public boolean isPasswordLabelSet(){
+        return passwordLabel != null && ifJPanelContainsComponent(this, passwordLabel);
+    }
+    public boolean isPasswordFieldSet(){
+        return passwordField != null && ifJPanelContainsComponent(this, passwordField);
+    }
+
+    public boolean isSignInButtonSet(){
+        return passwordField != null && ifJPanelContainsComponent(this, signInButton);
+    }
+
+    public boolean isExitButtonSet(){
+        return passwordField != null && ifJPanelContainsComponent(this, exitButton);
+    }
+
+    private boolean ifJPanelContainsComponent(JPanel panel, Component comp){
+        Component[] components = panel.getComponents();
+        for (Component component : components) {
+            if (comp.equals(component)) {
+                return true;
+            }
+        }
+        return false;
+
+    }
 
     @Override
     public void setPreferredSize(Dimension preferredSize) {

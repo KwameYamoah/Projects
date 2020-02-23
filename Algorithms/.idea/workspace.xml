@@ -6,7 +6,15 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2ceea33-4ff0-4a05-a89d-942b5087e686" name="Default Changelist" comment="" />
+    <list default="true" id="d2ceea33-4ff0-4a05-a89d-942b5087e686" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Algorithms/PathFinding/AStarAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Algorithms/PathFinding/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Algorithms/PathFinding/DijkstraAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Algorithms/PathFinding/Interface/UI_Frame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Algorithms/PathFinding/Interface/UI_Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Algorithms/PathFinding/SampleAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +69,9 @@
       <recent name="Algorithms.Sorting" />
       <recent name="Algorithms" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Algorithms.PathFinding" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -80,13 +91,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.UI_Frame">
-    <configuration name="UI_Frame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Algorithms.Sorting.Interface.UI_Frame" />
+  <component name="RunManager" selected="Application.UI_Frame (1)">
+    <configuration name="UI_Frame (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Algorithms.PathFinding.Interface.UI_Frame" />
       <module name="Projects" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Algorithms.Sorting.Interface.*" />
+          <option name="PATTERN" value="Algorithms.PathFinding.Interface.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,8 +105,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UI_Menu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Algorithms.Sorting.Interface.UI_Menu" />
+    <configuration name="UI_Frame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Algorithms.Sorting.Interface.UI_Frame" />
       <module name="Projects" />
       <extension name="coverage">
         <pattern>
@@ -152,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UI_Frame (1)" />
         <item itemvalue="Application.UI_Frame" />
         <item itemvalue="JUnit.Algorithms.Sorting in Projects" />
         <item itemvalue="JUnit.SelectionSortTest" />
         <item itemvalue="JUnit.Algorithms.Sorting.Interface in Projects" />
-        <item itemvalue="Application.UI_Menu" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572434174132</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Project deadline passed, will re-visit later to polish and add more sorts">
+      <created>1572434352620</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1572434352620</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -279,7 +297,8 @@
     <MESSAGE value="Interface moved into correct directory.&#10;HeapSort was previously removed as it was for Tree structures and has a similar nature to selection sort" />
     <MESSAGE value="Simple UI created to select number of values and a sort to visualize." />
     <MESSAGE value="Jar file to run" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jar file to run" />
+    <MESSAGE value="Project deadline passed, will re-visit later to polish and add more sorts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project deadline passed, will re-visit later to polish and add more sorts" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Algorithms$Algorithms_Sorting_in_Projects.ic" NAME="Algorithms.Sorting in Projects Coverage Results" MODIFIED="1572416695137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
