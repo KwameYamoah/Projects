@@ -102,14 +102,7 @@ public class LoginScreen extends JPanel {
     public boolean ifJPanelContainsComponentTest(JPanel panel){
         JComponent comp = new JLabel();
         panel.add(comp);
-        Component[] components = panel.getComponents();
-        for (Component component : components) {
-            if (comp.equals(component)) {
-                return true;
-            }
-        }
-        return false;
-
+        return ifJPanelContainsComponent(panel,comp);
     }
 
     public boolean isUserNameLabelSet(){
