@@ -5,8 +5,4 @@ public class AdminAccount extends Account {
         super(username, password, email, region);
     }
 
-    @Override
-    public String encryptPassword(String password) {
-        return null;
-    }
 }

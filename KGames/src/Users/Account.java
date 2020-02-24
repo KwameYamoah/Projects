@@ -8,7 +8,7 @@ public abstract class Account {
 
     Account(String username, String password, String email, String region) {
         this.username = username;
-        this.password = encryptPassword(password);
+        this.password = Database.encryptPassword(password);
         this.email = email;
         this.region = region;
     }
@@ -29,5 +29,14 @@ public abstract class Account {
         return region;
     }
 
-    public abstract String encryptPassword(String password);
+    @Override
+    public boolean equals(Object obj) {
+        Account other = (Account) obj;
+        return this.email.equals(other.email);
+    }
+
+    @Override
+    public String toString() {
+        return username;
+    }
 }
