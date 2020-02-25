@@ -18,9 +18,19 @@ public class AccountTest {
     private String testRegion2 = "Europe";
 
     @Before
-    public void setUp(){
+    public void setUp() throws InvalidPassword {
         adminAccount = new AdminAccount(testUsername1, testPassword1, testEmail1, testRegion1);
         playerAccount = new PlayerAccount(testUsername2, testPassword2, testEmail2, testRegion2);
+    }
+
+    @Test(expected = InvalidPassword.class)
+    public void checkIfPasswordLengthIsInvalid() throws InvalidPassword {
+        Account account = new PlayerAccount(testUsername1, "Muito", testEmail1,testRegion1);
+    }
+
+    @Test
+    public void checkIfPasswordLengthIsCorrect() throws InvalidPassword {
+        Account account = new PlayerAccount(testUsername1, "Muito123", testEmail1,testRegion1);
     }
 
     @Test
@@ -30,7 +40,7 @@ public class AccountTest {
 
     @Test
     public void checkIfAdminAccountPasswordIsStored(){
-        assertEquals(adminAccount.getPassword(), testPassword1);
+        assertEquals("]_cr):02", adminAccount.getPassword());
     }
 
     @Test
@@ -50,7 +60,7 @@ public class AccountTest {
 
     @Test
     public void checkIfPlayerAccountPasswordIsStored(){
-        assertEquals(playerAccount.getPassword(), testPassword2);
+        assertEquals("Urgtg9/1", playerAccount.getPassword());
     }
 
     @Test

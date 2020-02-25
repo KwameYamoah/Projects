@@ -6,11 +6,18 @@ public abstract class Account {
     private String email;
     private String region;
 
-    Account(String username, String password, String email, String region) {
+    Account(String username, String password, String email, String region) throws InvalidPassword {
         this.username = username;
+        checkPasswordValidity(password);
         this.password = Database.encryptPassword(password);
         this.email = email;
         this.region = region;
+    }
+
+    private void checkPasswordValidity(String password) throws InvalidPassword {
+        if(password.length() < 8){
+            throw new InvalidPassword("Password should be 8 or more characters");
+        }
     }
 
     public String getUsername() {

@@ -13,6 +13,14 @@ public class DatabaseTest {
         database = new Database();
     }
 
+
+    @Test
+    public void checkEmptyPasswordEncryption(){
+        String testPasswordString = "";
+        assertEquals("", Database.encryptPassword(testPasswordString));
+    }
+
+
     @Test
     public void checkSingleCharacterEncryption(){
         String testPasswordString = "c";
@@ -38,7 +46,7 @@ public class DatabaseTest {
     }
 
     @Test
-    public void checkFindingExistingAccount() throws AccountNotFound, EmailAlreadyExists {
+    public void checkFindingExistingAccount() throws AccountNotFound, EmailAlreadyExists, InvalidPassword {
         Account testAccount = new PlayerAccount("Parrot","Muito123", "bob@gmail.com","Asia");
         Database.addAccount(testAccount);
         Account account = Database.findPlayerAccount("Parrot");
@@ -46,7 +54,7 @@ public class DatabaseTest {
     }
 
     @Test
-    public void checkAddingAccount() throws EmailAlreadyExists{
+    public void checkAddingAccount() throws EmailAlreadyExists, InvalidPassword {
         int currentAccountsSize = database.getTotalAccountsNumber();
         Account testAccount = new PlayerAccount("Monkey","Muito123", "Monkey@gmail.com","Europe");
         Database.addAccount(testAccount);
