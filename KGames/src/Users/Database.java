@@ -1,5 +1,8 @@
 package Users;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.util.ArrayList;
 
 public class Database {
@@ -7,7 +10,7 @@ public class Database {
     private static ArrayList<PlayerAccount> playerAccounts;
     private static final String KEY = "83208";
     private static final String KEY_OPERATION = "+--+-";
-
+    private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
     Database(){
         adminAccounts = new ArrayList<>();
         playerAccounts = new ArrayList<>();
@@ -24,6 +27,33 @@ public class Database {
         }
     }
 
+    static void deletePlayerAccount(String email) throws AccountNotFound {
+        for(PlayerAccount playerAccount: playerAccounts){
+            if(playerAccount.getEmail().equals(email)){
+                playerAccounts.remove(playerAccount);
+                return;
+            }
+        }
+        throw new AccountNotFound();
+    }
+
+    static void deleteAdminAccount(String email) throws AccountNotFound {
+        for(AdminAccount adminAccount: adminAccounts){
+            if(adminAccount.getEmail().equals(email)){
+                adminAccounts.remove(adminAccount);
+                return;
+            }
+        }
+        throw new AccountNotFound();
+    }
+
+    public static void removeAllPlayerAccounts() {
+        playerAccounts.clear();
+    }
+
+    public static void removeAllAdminAccounts() {
+        adminAccounts.clear();
+    }
 
     private static void checkIfAdminEmailIsUnique(Account acc) throws EmailAlreadyExists{
         for(Account account : adminAccounts){
@@ -83,6 +113,20 @@ public class Database {
         }
         throw new AccountNotFound();
     }
+
+    public static boolean checkLogin(Account account, String enteredPassword) throws IncorrectPassword {
+        if(isPasswordCorrect(account.getPassword(), enteredPassword)){
+            return true;
+        }
+        throw new IncorrectPassword();
+    }
+
+    private static boolean isPasswordCorrect(String accountPassword, String enteredPassword){
+        return accountPassword.equals(encryptPassword(enteredPassword));
+    }
+
+
+
 
     public int getPlayerAccountsNumber(){
         return playerAccounts.size();
